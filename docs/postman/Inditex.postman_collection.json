@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "069af6c3-f168-44ef-9024-699cda542291",
+		"name": "Prueba Técnica Inditex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10745174"
+	},
+	"item": [
+		{
+			"name": "api-price",
+			"item": [
+				{
+					"name": "Caso 1: 14 de junio a las 10:00",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14T10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caso 2: 14 de junio a las 16:00",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14T16:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caso 3: 14 de junio a las 21:00",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14T21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caso 4: 15 de junio a las 10:00",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-15T10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caso 5: 16 de junio a las 21:00",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-16T21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caso 6: Producto no existente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=99999&brandId=1&applicationDate=2020-06-14T10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inditex-core-platform",
+								"v1",
+								"price",
+								"by-filters"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "99999"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14T10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
