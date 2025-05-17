@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Maven Clean & Verify
-        run: mvn -f inditex-core-api-price/pom.xml clean verify
+        run: mvn -f api-price/pom.xml clean verify
 
   checkstyle:
     name: Checkstyle Validation
@@ -55,7 +55,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run Checkstyle
-        run: mvn -f inditex-core-api-price/pom.xml checkstyle:check
+        run: mvn -f api-price/pom.xml checkstyle:check
 
   coverage:
     name: Code Coverage (JaCoCo)
@@ -80,16 +80,16 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run tests with JaCoCo
-        run: mvn -f inditex-core-api-price/pom.xml test jacoco:report
+        run: mvn -f api-price/pom.xml test jacoco:report
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: inditex-core-api-price/target/site/jacoco/
+          path: api-price/target/site/jacoco/
 
   deploy:
-    name: Deploy to Render - Dev
+    name: Deploy to Render - Cert
     runs-on: ubuntu-latest
     needs: [ coverage ]
     steps:

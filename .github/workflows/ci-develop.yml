@@ -55,7 +55,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run Checkstyle
-        run: mvn -f inditex-core-api-price/pom.xml checkstyle:check
+        run: mvn -f api-price/pom.xml checkstyle:check
   
   sonarcloud:
     name: SonarCloud Analysis
@@ -84,7 +84,7 @@ jobs:
           SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          mvn -f inditex-core-api-price/pom.xml clean verify sonar:sonar \
+          mvn -f api-price/pom.xml clean verify sonar:sonar \
             -Dsonar.projectKey=$SONAR_PROJECT_KEY \
             -Dsonar.organization=$SONAR_ORGANIZATION \
             -Dsonar.host.url=$SONAR_HOST_URL \
@@ -113,13 +113,13 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run tests with JaCoCo
-        run: mvn -f inditex-core-api-price/pom.xml test jacoco:report
+        run: mvn -f api-price/pom.xml test jacoco:report
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: inditex-core-api-price/target/site/jacoco/
+          path: api-price/target/site/jacoco/
 
   deploy:
     name: Deploy to Render - Dev

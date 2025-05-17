@@ -100,22 +100,22 @@ curl -X GET "http://localhost:8080/api/v1/prices?productId=35455&brandId=1&appli
 
 ```bash
 # Caso 1: 14 de junio a las 10:00
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00" -H "accept: application/json"
 
 # Caso 2: 14 de junio a las 16:00
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00" -H "accept: application/json"
 
 # Caso 3: 14 de junio a las 21:00
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00" -H "accept: application/json"
 
 # Caso 4: 15 de junio a las 10:00
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00" -H "accept: application/json"
 
 # Caso 5: 16 de junio a las 21:00
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00" -H "accept: application/json"
 
 # Caso 6: Producto no existente
-curl -X GET "http://localhost:8080/inditex-core-platform/v1/price/by-filters?productId=99999&brandId=1&applicationDate=2020-06-14T10:00:00" -H "accept: application/json"
+curl -X GET "http://localhost:8080/api/v1/price/by-filters?productId=99999&brandId=1&applicationDate=2020-06-14T10:00:00" -H "accept: application/json"
 ```
 
 Se adjunta archivo Postman para su facil testeo en la ruta :
