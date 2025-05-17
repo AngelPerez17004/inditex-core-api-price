@@ -138,7 +138,7 @@ Dado que la idea a futuro es integrarte con ELK.
 
 ## Checkstyle
 
-Checkstyle se ejecuta automáticamente en cada build.
+Checkstyle se ejecuta automáticamente en cada build.    
 
 Archivo de configuración: `checkstyle.xml`
 
