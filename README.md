@@ -286,6 +286,5 @@ Sin embargo, se pueden agregar fácilmente utilizando la configuración de Sprin
 Además, se ha utilizado un enfoque de arquitectura hexagonal y DDD para garantizar la escalabilidad y mantenibilidad del código.
 Faltaria para injectar las credenciales de base de datos en un archivo de propiedades o en algun servicio de nube como Aws Secret Manager o Azure keyVault o HashicorpVault, en lugar de tenerlas codificadas en el código fuente.
 Si deseas discutir el proyecto o tienes alguna pregunta, no dudes en contactarme.
-
 Puedes contactarme a través de LinkedIn: [Angel Marcel Perez Cristóbal](https://www.linkedin.com/in/angel-marcel-perez-crist%C3%B3bal-1b80a8277/)
 ```
