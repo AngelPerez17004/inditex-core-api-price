@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: price
+  sql:
+    init:
+      mode: always
+      platform: h2
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+    settings:
+      web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    url: /openapi-price.yaml
+  api-docs:
+    enabled: true
+logging:
+  level:
+    root: INFO
+  file:
+    name: logs/app.log

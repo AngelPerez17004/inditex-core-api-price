@@ -1,0 +1,68 @@
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Maven ===
+target/
+dependency-reduced-pom.xml
+build.log
+.mvn/timing.properties
+.settings/
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# === Eclipse ===
+.project
+.classpath
+.settings/
+bin/
+
+# === VS Code ===
+.vscode/
+
+# === OS archivos temporales ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+logs/
+*.log
+
+# === Spring Boot específico ===
+.env
+*.h2.db
+*.mv.db
+
+# === Test reports & coverage ===
+jacoco.exec
+target/site/
+coverage-report/
+test-output/
+
+# === Swagger / OpenAPI generados ===
+generated/
+openapi/
+openapi.json
+openapi.yaml
+
+# === Docker / Kubernetes ===
+*.log
+*.pid
+docker-compose.override.yml
+
+# === Misc ===
+*.bak
+*.tmp
+*.swp
+*~
+
+# === Local configuration ===
+local.properties
+.envrc
