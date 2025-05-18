@@ -367,6 +367,13 @@ docker-compose down
 
 Este proyecto cuenta con una configuración de CI/CD completamente automatizada usando **GitHub Actions**, con integración hacia **Render** para el despliegue en la nube.
 
+Evidencia de commit en GitHub:
+
+![Cobertura de pruebas](/docs/images/cicd1.png)
+
+Evidencia de CI/CD (DEV) en GitHub Actions:
+
+![Cobertura de pruebas](/docs/images/cicd2.png)
 ### 🔁 Flujo de Ramas y Entornos
 
 Se han definido tres ramas principales que simulan ambientes reales de despliegue:
@@ -438,6 +445,14 @@ Cada archivo de workflow contiene etapas organizadas para cubrir el ciclo comple
 - Se ha realizado el despliegue en Render para los 3 entornos.
 - Cada entorno cuenta con su propia aplicación web separada.
 - Render se activa desde el último stage del pipeline de cada rama, ejecutando un `curl` al webhook del ambiente correspondiente.
+
+Evidencia de despliegue (DEV) en Render:
+
+![Cobertura de pruebas](/docs/images/deploy.png)
+
+Evidencia de CURL hacia api desplegada en Render (DEV):
+
+![Cobertura de pruebas](/docs/images/render-curl.png)
 
 ### 🛠️ Tecnologías Usadas
 
