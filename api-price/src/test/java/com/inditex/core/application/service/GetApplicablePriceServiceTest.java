@@ -1,10 +1,10 @@
 package com.inditex.core.application.service;
 
 import com.inditex.core.application.port.persistence.ReadPricePort;
-import com.inditex.core.config.exception.PriceNotFoundException;
 import com.inditex.core.domain.Price;
 import com.inditex.core.domain.PriceDetail;
 import com.inditex.core.domain.PriceServiceDomain;
+import com.inditex.core.domain.exception.PriceNotFoundException;
 import com.inditex.core.infrastructure.util.enums.Currency;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
