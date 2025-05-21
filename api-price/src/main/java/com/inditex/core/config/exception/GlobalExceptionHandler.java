@@ -1,5 +1,6 @@
 package com.inditex.core.config.exception;
 
+import com.inditex.core.domain.exception.PriceNotFoundException;
 import com.inditex.core.model.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
