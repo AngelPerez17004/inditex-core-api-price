@@ -8,7 +8,7 @@ public final class Constants {
                 + "    WHERE p.productId = :productId "
                 + "    AND p.brandId = :brandId "
                 + "    AND :dateQuery BETWEEN p.startDate AND p.endDate "
-                + "    ORDER BY p.priority DESC";
+                + "    ORDER BY p.priority DESC LIMIT 1";
     }
 
 }

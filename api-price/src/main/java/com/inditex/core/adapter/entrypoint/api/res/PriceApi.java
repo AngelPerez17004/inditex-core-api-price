@@ -1,35 +1,33 @@
 package com.inditex.core.adapter.entrypoint.api.res;
 
 
-import com.inditex.core.adapter.entrypoint.api.FindPriceEndpointAdapter;
 import com.inditex.core.api.PriceApiDelegate;
+import com.inditex.core.application.port.entrypoint.api.FindPriceEndpointPort;
 import com.inditex.core.model.PriceResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
 
-@Service
+@Component
 @Slf4j
 public class PriceApi implements PriceApiDelegate {
 
-    private final FindPriceEndpointAdapter findPriceEndpointAdapter;
+    private final FindPriceEndpointPort findPriceEndpointPort;
 
     /**
      * Constructor de la clase PriceApi.
-     *
-     * @param findPriceEndpointAdapter adaptador para encontrar precios
+     * @param findPriceEndpointPort adaptador para encontrar precios
      */
-    public PriceApi(FindPriceEndpointAdapter findPriceEndpointAdapter) {
-        this.findPriceEndpointAdapter = findPriceEndpointAdapter;
+    public PriceApi(FindPriceEndpointPort findPriceEndpointPort) {
+        this.findPriceEndpointPort = findPriceEndpointPort;
     }
 
 
     /**
      * Obtiene el precio aplicable según la fecha, producto y marca.
-     *
      * @param applicationDate fecha de aplicación
      * @param productId       identificador del producto
      * @param brandId         identificador de la marca
@@ -44,7 +42,7 @@ public class PriceApi implements PriceApiDelegate {
                 productId,
                 brandId);
         PriceResponse applicablePriceResponse =
-                findPriceEndpointAdapter.getApplicablePrice(applicationDate, productId, brandId);
+                findPriceEndpointPort.getApplicablePrice(applicationDate, productId, brandId);
         log.info("Returning price response :{}", applicablePriceResponse);
         return ResponseEntity.ok(applicablePriceResponse);
     }

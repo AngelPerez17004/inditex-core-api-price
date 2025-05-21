@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 public interface PriceRepository extends JpaRepository<PriceEntity, Long> {
 
@@ -21,7 +22,7 @@ public interface PriceRepository extends JpaRepository<PriceEntity, Long> {
      * @return lista de precios aplicables ordenados por prioridad
      */
     @Query(value = Constants.H2Query.FIND_APPLICABLE_PRICE)
-    List<PriceEntity> findApplicablePrice(@Param("productId") Long productId,
-                                          @Param("brandId") Long brandId,
-                                          @Param("dateQuery") LocalDateTime dateQuery);
+    PriceEntity findApplicablePrice(@Param("productId") Long productId,
+                                              @Param("brandId") Long brandId,
+                                              @Param("dateQuery") LocalDateTime dateQuery);
 }
