@@ -3,12 +3,12 @@ package com.inditex.core.application.port.persistence;
 import com.inditex.core.domain.Price;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Optional;
 
 public interface ReadPricePort {
 
-    List<Price> findApplicablePrice(LocalDateTime applicationDate,
-                                    Long productId,
-                                    Long brandId);
+    Optional<Price> findApplicablePrice(LocalDateTime applicationDate,
+                                        Long productId,
+                                        Long brandId);
 
 }

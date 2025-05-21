@@ -6,6 +6,9 @@ import com.inditex.core.domain.PriceDetail;
 import com.inditex.core.infrastructure.annotations.Mapper;
 import com.inditex.core.infrastructure.util.enums.Currency;
 
+import java.util.Objects;
+import java.util.Optional;
+
 @Mapper
 class PriceH2Mapper {
 
@@ -13,8 +16,13 @@ class PriceH2Mapper {
         super();
     }
 
-    Price toDomain(PriceEntity priceEntity) {
-        return Price.builder()
+    Optional<Price> toDomain(PriceEntity priceEntity) {
+
+        if (Objects.isNull(priceEntity)) {
+            return Optional.empty();
+        }
+
+        return Optional.of(Price.builder()
                 .id(priceEntity.getId())
                 .brandId(priceEntity.getBrandId())
                 .productId(priceEntity.getProductId())
@@ -27,7 +35,7 @@ class PriceH2Mapper {
                         .build())
                 .startDate(priceEntity.getStartDate())
                 .endDate(priceEntity.getEndDate())
-                .build();
+                .build());
     }
 
 }

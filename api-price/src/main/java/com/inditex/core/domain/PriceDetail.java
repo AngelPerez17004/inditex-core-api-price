@@ -16,4 +16,8 @@ public class PriceDetail {
     private String description;
     private Currency currency;
     private BigDecimal price;
+
+    public boolean isGreaterThan(PriceDetail other) {
+        return this.price.compareTo(other.price) > 0;
+    }
 }
