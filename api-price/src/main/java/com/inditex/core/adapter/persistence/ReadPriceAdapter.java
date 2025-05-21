@@ -1,13 +1,12 @@
 package com.inditex.core.adapter.persistence;
 
-import com.inditex.core.adapter.persistence.model.PriceEntity;
 import com.inditex.core.adapter.persistence.repository.PriceRepository;
 import com.inditex.core.application.port.persistence.ReadPricePort;
 import com.inditex.core.domain.Price;
 import com.inditex.core.infrastructure.annotations.Adapter;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Optional;
 
 @Adapter
 class ReadPriceAdapter implements ReadPricePort {
@@ -23,11 +22,7 @@ class ReadPriceAdapter implements ReadPricePort {
 
 
     @Override
-    public List<Price> findApplicablePrice(LocalDateTime date, Long productId, Long brandId) {
-        List<PriceEntity> rest = priceRepository.findApplicablePrice(productId, brandId, date);
-        return priceRepository.findApplicablePrice(productId, brandId, date)
-                .stream()
-                .map(priceH2Mapper::toDomain)
-                .toList();
+    public Optional<Price> findApplicablePrice(LocalDateTime date, Long productId, Long brandId) {
+        return priceH2Mapper.toDomain(priceRepository.findApplicablePrice(productId, brandId, date));
     }
 }
